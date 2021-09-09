@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Gallery</title>
+    <style>
+        #spinner {
+            display: none;
+        }
+        #error-message{
+            display: none;
+        }
+    </style>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body>
+    <main>
+        <!-- book search section start -->
+        <section class="container">
+            <h3 class="w-50 pt-2 mx-auto">Welcome To <span class="text-success">Book Gallery</span></h3>
+            <div class="col-lg-6 mx-auto pt-4 pb-2">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search-field" placeholder="Type Your Book Name..."
+                        aria-label="Search Team" aria-describedby="basic-addon2" required>
+                    <div class="input-group-append">
+                        <button class="input-group-text" id="search-btn" onclick="searchBook()">Search</button>
+                    </div>
+                </div>
+                <!-- spinner -->
+                <img id="spinner" class="w-25 mx-auto" src="images/search.gif" alt="">
+                <!-- <div id="books"> </div>
+            </div> -->
+
+
+        </section>
+        <!-- search result not found  -->
+        <div id="container">
+            <h6 id="error-message" class="w-50 mx-auto text-danger">Search Result Not Found!</h6>
+        </div>
+        <!-- search items count -->
+        <div class="container">
+            <h6 id="search-result" class="w-50 mx-auto text-info pb-2"></h6>
+        </div>
+        </section>
+        <!-- search items end -->
+        <!-- book search section end -->
+        <!-- book details section start -->
+        <section class="book-details">
+            <div class="container">
+                <div class="row row-cols-lg-3 row-cols-1  g-4" id="book-list">
+
+                </div>
+            </div>
+        </section>
+        <!-- book details section end -->
+    </main>
+    <!-- js files  -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
